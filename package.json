@@ -1,0 +1,31 @@
+{
+  "name": "junkie",
+  "version": "1.0.0",
+  "description": "Kanban-app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "update-dist": "xcopy src dist /E /Y /I",
+    "build": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kuasne/KanbanApp.git"
+  },
+  "keywords": [
+    "kanban"
+  ],
+  "author": "Lorenzo Almeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kuasne/KanbanApp/issues"
+  },
+  "homepage": "https://github.com/Kuasne/KanbanApp#readme",
+  "devDependencies": {
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "junkie": "file:"
+  }
+}

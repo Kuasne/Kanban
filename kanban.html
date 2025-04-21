@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kanban Lorenzo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="kanban.css" />
+</head>
+<body>
+  <header>
+    <h1>🧠 DevTasks</h1>
+    <p>By Lorenzo</p>
+  </header>
+
+  <main>
+    <div class="board">
+      <div class="column">
+        <h2>📌 Backlog</h2>
+        <div class="tasks" id="todo-tasks"></div>
+        <button class="add-task">+ Tarefa</button>
+      </div>
+
+      <div class="column">
+        <h2>🚧 In Progress</h2>
+        <div class="tasks" id="in-progress-tasks"></div>
+        <button class="add-task">+ Tarefa</button>
+      </div>
+
+      <div class="column">
+        <h2>✅ Done</h2>
+        <div class="tasks" id="done-tasks"></div>
+        <button class="add-task">+ Tarefa</button>
+      </div>
+    </div>
+
+    <!-- Caixa de Entrada Personalizada -->
+    <div id="task-input-container" style="display:none;">
+      <input type="text" id="task-input" placeholder="Digite a descrição da tarefa" />
+      <button id="save-task">Salvar</button>
+      <button id="cancel-task">Cancelar</button>
+    </div>
+
+  </main>
+
+  <script src="kanban.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

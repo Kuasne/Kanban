@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-form">
+        <h1>Bem Vindo</h1>
+        <div class="input-group">
+          <label for="username">Usuário</label>
+          <input type="text" id="username" placeholder="Digite seu usuário" />
+        </div>
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" placeholder="Digite sua senha" />
+        </div>
+        <button id="login-button">Entrar</button>
+        <p id="message" class="message"></p>
+      </div>
+      <div class="login-image">
+        <img src="./img/img.jpg" alt="Ilustração decorativa" />
+      </div>
+    </div>
+    <h3>Lorenzo</h3>
+    <script>
+      // Função que realiza o login
+      function handleLogin() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const message = document.getElementById("message");
+
+        if (username === "Lorenzo" && password === "123") {
+          message.textContent = "Login bem sucedido! Bem-vindo, Lorenzo!";
+          message.style.color = "green";
+
+          // Espera 1 segundo antes de redirecionar
+          setTimeout(() => {
+            window.location.href = "kanban.html";
+          }, 1000);
+        } else {
+          message.textContent = "Usuário ou senha incorretos.";
+          message.style.color = "red";
+        }
+      }
+
+      // Evento de clique no botão de login
+      document.getElementById("login-button").addEventListener("click", handleLogin);
+
+      // Evento para acionar o login ao pressionar "Enter" no campo de senha
+      document.getElementById("password").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          handleLogin();
+        }
+      });
+    </script>
+  </body>
+</html>
