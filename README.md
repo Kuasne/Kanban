@@ -26,3 +26,17 @@ Um sistema de gerenciamento de tarefas estilo **Kanban**, criado com HTML, CSS e
 ```bash
 git clone https://github.com/Kuasne/Kanban.git
 
+```
+2. Se estiver usando Node:
+```
+npm install
+
+```
+
+✨ Contribuição
+Sinta-se à vontade para abrir issues ou pull requests com sugestões de melhorias!
+
+📌 Autor
+Desenvolvido com 💻 por Lorenzo Almeida
+📧 Contato: LinkedIn | GitHub
+
